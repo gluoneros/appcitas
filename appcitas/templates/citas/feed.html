@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block head_content %}
+<title> Appcitas feed </title>
+{% endblock %}
+        <div class="row">
+            {% for cita in citas %}
+            <div class="col-lg-4 offset-lg-4">
+                <div class="media">
+                    <img class="mr-3 rounded-circle" src="{{ cita.user.picture }}" alt="{{ cita.user.name }}">
+                    <div class="media-body">
+                        <h5 class="mt-0">{{ cita.user.name }}</h5>
+                        {{ cita.timestamp }}
+                    </div>
+                </div>
+                <img class="img-fluid mt-3 border rounded" src="{{ cita.photo }}" alt="{{ cita.title }}">
+                <h6 class="ml-1 mt-1">{{ cita.title }}</h6>
+            </div>
+            {% endfor %}
+        </div>
+

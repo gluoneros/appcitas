@@ -38,4 +38,4 @@ citas = [
 
 def list_citas(request):
     """List exixtin citas"""
-    return render(request, 'feed.html', {'citas': citas })
+    return render(request, 'citas/feed.html', {'citas': citas })
